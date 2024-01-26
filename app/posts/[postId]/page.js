@@ -1,9 +1,9 @@
 // Dynamic routers where the rout changes based on individual components
 // localhost:3000/posts/:postId
 
-const page = () => {
+const page = ({postId}) => {
   return (
-    <div>Post {postId}</div>
+    <div>Individual post {postId}</div>
   )
 }
 export default page
