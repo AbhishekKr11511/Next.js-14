@@ -1,4 +1,4 @@
-
+import Feed from'@components/Feed.jsx'
 
 const Home = () => {
   return (
@@ -7,13 +7,13 @@ const Home = () => {
             Discover & Share
             <br className="max-md:hidden"/>
             <span className="orange_gradient text-center">AI-Powered Prompts</span>
+        </h1>
             <p className="desc text-center">
                 Promptopia is an open-source AI prompting tool for modern world to discover, createand share creative prompts.
             </p>
 
-            {/*Feed */}
+            <Feed/>
             
-        </h1>
     </section>
   )
 }
