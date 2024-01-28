@@ -8,6 +8,8 @@ import Form from "@components/Form"
 
 const CreatePrompt = () => {
 
+    const router = useRouter()
+    const {data:session} = useSession()
     const [submitting, setSubmitting] = useState(false)
     const [post, setPost] = useState({
         prompt: "",
@@ -22,9 +24,9 @@ const CreatePrompt = () => {
             const response = await fetch('/api/prompt/new',{
                 method: 'POST',
                 body : JSON.stringify({
-                    prompt: post.prompt,
                     userId : session?.user.id,
-                    tag: post.tag
+                    prompt: post.prompt,
+                    tag: post.tag,
                 })
             })
 

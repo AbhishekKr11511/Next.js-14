@@ -1,4 +1,4 @@
-import {Schema, model, models} from 'mongoose'
+import mongoose,{Schema, model, models} from 'mongoose'
 
 const PromptSchema = new Schema({
     creator: {
@@ -9,7 +9,10 @@ const PromptSchema = new Schema({
         type: String,
         require: [true, 'Prompt is required'],
     },
-
+    tag:{
+        type: String,
+        require: [true, 'tag is required'],
+    }
 })
 
 // All the 'model' created in mongoose will be stored in 'models' library
